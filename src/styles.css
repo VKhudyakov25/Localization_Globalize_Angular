@@ -1,12 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
-.dx-viewport {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  flex-direction: column;
+.options {
+  padding: 20px;
+  background-color: rgba(191, 191, 191, 0.15);
+  margin-top: 20px;
 }
 
-.dx-field {
-  display: flex;
+.option {
+  margin-top: 10px;
+}
+
+.caption {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.option > label {
+  margin-right: 10px;
+}
+
+.option > .dx-selectbox {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#datebox {
+  margin-bottom: 30px;
+  margin-top: 20px;
 }

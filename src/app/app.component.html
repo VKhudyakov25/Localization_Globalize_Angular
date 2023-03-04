@@ -1,20 +1,46 @@
-<div class="dx-fieldset-header">SearchBox</div>
-<div class="dx-field">
-  <div class="dx-field-label">Product</div>
-  <div class="dx-field-value">
+<dx-data-grid [dataSource]="payments" [columnAutoWidth]="true">
+  <!-- <dxi-column
+    dataField="PaymentId"
+    [caption]="formatMessage('Number')"
+    [allowEditing]="false"
+  ></dxi-column> -->
+  <!-- <dxi-column
+    dataField="ContactName"
+    [caption]="formatMessage('Contact')"
+  ></dxi-column>
+  <dxi-column
+    dataField="CompanyName"
+    [caption]="formatMessage('Company')"
+  ></dxi-column>
+  <dxi-column
+    dataField="Amount"
+    dataType="number"
+    [caption]="formatMessage('Amount')"
+  ></dxi-column>
+  <dxi-column
+    dataField="PaymentDate"
+    dataType="date"
+    [caption]="formatMessage('PaymentDate')"
+  ></dxi-column> -->
+
+  <dxo-filter-row [visible]="true" applyFilter="auto"> </dxo-filter-row>
+  <dxo-editing mode="popup" [allowUpdating]="true">
+    <dxo-popup [width]="700" [height]="345"> </dxo-popup>
+  </dxo-editing>
+</dx-data-grid>
+
+<dx-button type="success" [text]="formatMessage('BtnText')"></dx-button>
+<div class="options">
+  <div class="caption">Options</div>
+  <div class="option">
+    <label for="selectInput">Language</label>
     <dx-select-box
-      #selectBox
-      [dataSource]="productsDataSource"
-      displayExpr="Name"
-      valueExpr="id"
-      [searchEnabled]="true"
-      [searchMode]="searchModeOption"
-      [searchExpr]="searchExprOption"
-      [searchTimeout]="searchTimeoutOption"
-      [acceptCustomValue]="true"
-      (onCustomItemCreating)="addCustomItem($event)"
-    >
-      ></dx-select-box
-    >
+      [inputAttr]="{ id: 'selectInput' }"
+      [dataSource]="locales"
+      displayExpr="name"
+      valueExpr="value"
+      [value]="locale"
+      (onValueChanged)="changeLocale($event)"
+    ></dx-select-box>
   </div>
 </div>
