@@ -1,10 +1,10 @@
 <dx-data-grid [dataSource]="payments" [columnAutoWidth]="true">
-  <!-- <dxi-column
+  <dxi-column
     dataField="PaymentId"
     [caption]="formatMessage('Number')"
     [allowEditing]="false"
-  ></dxi-column> -->
-  <!-- <dxi-column
+  ></dxi-column>
+  <dxi-column
     dataField="ContactName"
     [caption]="formatMessage('Contact')"
   ></dxi-column>
@@ -21,7 +21,7 @@
     dataField="PaymentDate"
     dataType="date"
     [caption]="formatMessage('PaymentDate')"
-  ></dxi-column> -->
+  ></dxi-column>
 
   <dxo-filter-row [visible]="true" applyFilter="auto"> </dxo-filter-row>
   <dxo-editing mode="popup" [allowUpdating]="true">
